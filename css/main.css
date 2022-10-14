@@ -63,7 +63,7 @@ textarea {
 }
 
 input::-webkit-input-placeholder {
-  font-weight: 500;
+  font-weight: 400;
   /*font-size: 15px;
   line-height: 12px;*/
   color: #CECECE;
