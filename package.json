@@ -1,0 +1,23 @@
+{
+  "name": "linkedin_redesign_sass_gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dasha09git/LinkedIn_Redesign.git"
+  },
+  "author": "daria",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dasha09git/LinkedIn_Redesign/issues"
+  },
+  "homepage": "https://github.com/dasha09git/LinkedIn_Redesign#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
+}

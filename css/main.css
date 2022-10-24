@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -14,9 +15,8 @@ a {
 }
 
 a, a:active, a:focus, a:hover {
-    cursor: pointer;
-    outline: none;
-    
+  cursor: pointer;
+  outline: none;
 }
 
 ol, ul, li {
@@ -38,14 +38,13 @@ html, body {
   width: 100%;
   min-width: 320px;
   color: #181818;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 11px;
   line-height: 11px;
 }
 
 /*Обнуление input button и тп*/
-
 button,
 input,
 optgroup,
@@ -70,11 +69,7 @@ input::-webkit-input-placeholder {
 }
 
 :focus::-webkit-input-placeholder {
-  color: transparent
-}
-
-textarea::-webkit-input-placeholder {
-  /*color: #ffffff;*/
+  color: transparent;
 }
 
 input,
@@ -90,11 +85,10 @@ input {
 }
 
 button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
+[type=button],
+[type=reset],
+[type=submit] {
   cursor: pointer;
-  -webkit-appearance: none;
 }
 
 textarea {
@@ -103,7 +97,11 @@ textarea {
   overflow-x: hidden;
 }
 
-/*--------------------------------------------*/
+.education, .experience, .skills, .projects, .about, .sidebar-block, .profile {
+  background: #ffffff;
+  box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
+  border-radius: 4px;
+}
 
 .page {
   min-height: 100%;
@@ -112,7 +110,6 @@ textarea {
   display: flex;
   flex-direction: column;
   min-width: 320px;
-
 }
 
 .container {
@@ -136,15 +133,14 @@ textarea {
   font-weight: 700;
 }
 
-.item-title { 
+.item-title {
   font-size: 14px;
   line-height: 150%;
   color: #181818;
   font-weight: 700;
-} 
+}
 
 /*--------------------------------------------*/
-
 .header {
   position: absolute;
   width: 100%;
@@ -156,7 +152,6 @@ textarea {
   flex: 0 0 auto;
   min-width: 320px;
 }
-
 .header__container {
   max-width: 1400px;
   display: flex;
@@ -165,7 +160,6 @@ textarea {
   padding: 0 0 0 10px;
   box-sizing: content-box;
 }
-
 .header__logo {
   width: 110px;
   border-right: 1px solid #F4F4F4;
@@ -173,31 +167,41 @@ textarea {
   display: flex;
   justify-content: center;
 }
-
 .header__logo-img {
   align-self: center;
   height: 46px;
   width: 46px;
   box-sizing: content-box;
 }
-
 .header__menu {
   max-width: 450px;
   width: 100%;
   margin: 0 17px;
+}
+.header__burger {
+  text-transform: uppercase;
+  font-weight: 700;
+  border-right: 1px solid #F4F4F4;
+  border-left: 1px solid #F4F4F4;
+  min-height: 80px;
+  max-width: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
 }
 
 .menu__list {
   display: flex;
   justify-content: space-around;
 }
-
 .menu__item {
   padding: 0 10px;
   cursor: pointer;
   position: relative;
 }
-
 .menu__link-notify {
   font-size: 9px;
   color: #FFFFFF;
@@ -216,24 +220,20 @@ textarea {
   display: inline-block;
   padding: 3px 2px;
 }
-
-
 .menu__link {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .menu__link-icon {
   margin: 0 0 10px 0;
 }
-
 .menu__link-text {
   text-transform: uppercase;
   font-weight: 700;
 }
 
-.header__search {
+.header-search {
   flex-grow: 1;
   /*min-width: 250px;     Или все-таки нужно указывать ширину/высоту?? ну высоту можно тут да, а шмрину можно просто растянуть как ты и сделал, так что все хорошо
   max-width: 365px;*/
@@ -244,13 +244,11 @@ textarea {
   display: flex;
   flex-shrink: 0;
 }
-
 .header-search__form {
   width: 100%;
   padding: 0 33px;
   align-self: center;
 }
-
 .header-search__input {
   width: 100%;
   font-size: 16px;
@@ -259,41 +257,34 @@ textarea {
   background: url("../img/icons/search.svg") left center no-repeat;
   padding-left: 44px;
 }
-
 .header-search__button {
   display: none;
 }
 
-.header__profile {
+.header-profile {
   display: flex;
   align-items: center;
   max-width: 330px;
   width: 100%;
+  /*._green {  не называть так классы */
 }
-
 .header-profile__photo {
   margin-right: 15px;
 }
-
 .header-profile__user {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-
 .header-profile__user-you {
-   color: rgba(24, 24, 24, 0.2);
+  color: rgba(24, 24, 24, 0.2);
 }
-
 .header-profile__user-name {
   font-weight: 700;
   margin-right: 10px;
 }
-
 .header-profile__info {
   color: #747474;
 }
-
-  /*._green {  TODO А почему такой странный класс? */
 .header-profile__value {
   color: #02B033;
   position: relative;
@@ -301,26 +292,7 @@ textarea {
   background: url("../img/icons/arrow-up-right.svg") 95% 1px no-repeat;
 }
 
-.burger-dots {
-  text-transform: uppercase;
-  font-weight: 700;
-  border-right: 1px solid #F4F4F4;
-  border-left: 1px solid #F4F4F4;
-  min-height: 80px;
-  max-width: 90px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-}
-
-.header__burger {
-  display: none;
-}
-
-.other-menu__dots {
+.header-burger__dots {
   width: 4px;
   height: 4px;
   border-radius: 50%;
@@ -329,9 +301,8 @@ textarea {
   display: block;
   margin-bottom: 20px;
 }
-
-.other-menu__dots:before, .other-menu__dots:after {
-  content: '';
+.header-burger__dots::before, .header-burger__dots::after {
+  content: "";
   width: 100%;
   height: 100%;
   position: absolute;
@@ -340,24 +311,20 @@ textarea {
   border-radius: 50%;
   background-color: #181818;
 }
-
-.other-menu__dots:before {
-   right: 8px;
+.header-burger__dots::before {
+  right: 8px;
 }
-
-.other-menu__dots:after {
+.header-burger__dots::after {
   left: 8px;
 }
 
 /*----------------------------------------------*/
-
 .main {
   margin-top: 80px;
   padding-top: 40px;
   padding-bottom: 40px;
   flex: 1 0 auto;
 }
-
 .main__container {
   display: flex;
 }
@@ -370,20 +337,14 @@ textarea {
 
 .profile {
   padding: 20px 30px;
-  box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
-  border-radius: 4px;
-  background: #FFFFFF;
   background-image: url("../img/img/Rectangle_3.png");
   background-repeat: no-repeat;
   margin-bottom: 31px;
 }
-
 .profile__tools {
   display: flex;
   justify-content: space-between;
-  
 }
-
 .profile__tool {
   min-height: 36px;
   background: rgba(255, 255, 255, 0.9);
@@ -393,23 +354,13 @@ textarea {
   align-items: center;
   padding: 0 10px;
 }
-
-.upload-arrow {
-  opacity: 0.5;
-}
-
-.right-tools__wrapper {
-  display: flex;
-}
-
-._edit {
+.profile__tool_edit {
   position: relative;
   padding-left: 35px;
   margin-right: 10px;
 }
-
-._edit:before {
-  content: '';
+.profile__tool_edit:before {
+  content: "";
   width: 16px;
   right: 16px;
   display: block;
@@ -419,7 +370,12 @@ textarea {
   bottom: 4px;
   background: url("../img/icons/edit.svg") center center no-repeat;
 }
-
+.profile__tool-upload {
+  opacity: 0.5;
+}
+.profile__tools-wrap {
+  display: flex;
+}
 .profile__dots {
   width: 3px;
   height: 3px;
@@ -428,9 +384,8 @@ textarea {
   position: relative;
   display: block;
 }
-
 .profile__dots:before, .profile__dots:after {
-  content: '';
+  content: "";
   width: 100%;
   height: 100%;
   position: absolute;
@@ -439,46 +394,38 @@ textarea {
   border-radius: 50%;
   background-color: #181818;
 }
-
 .profile__dots:before {
   bottom: 6px;
 }
-
 .profile__dots:after {
   top: 6px;
 }
-
 .profile__body {
   margin-top: 104px;
   display: flex;
   align-items: center;
 }
-
 .profile__photo {
   margin-right: 25px;
 }
-
-.info-wrap {
+.profile__info {
   padding-top: 25px;
 }
-
-.info-header {
+.profile__row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 15px;
 }
-
-.profile__name {
+.profile__title {
   font-size: 17px;
   line-height: 17px;
   font-weight: 700;
   position: relative;
   padding-right: 25px;
 }
-
-.profile__name:after {
-  content: '';
+.profile__title:after {
+  content: "";
   width: 16px;
   right: 16px;
   display: block;
@@ -489,16 +436,14 @@ textarea {
   border-radius: 3px;
   background: url("../img/icons/Logo_gold.svg") center center no-repeat;
 }
-
 .profile__location {
   line-height: 15px;
   position: relative;
   display: block;
   padding-left: 25px;
 }
-
 .profile__location:before {
-  content: '';
+  content: "";
   width: 16px;
   height: 16px;
   display: block;
@@ -509,18 +454,15 @@ textarea {
   border-radius: 3px;
   background: url("../img/icons/navigation.svg") center center no-repeat;
 }
-
 .profile__text {
   font-size: 14px;
   line-height: 150%;
   margin-bottom: 14px;
 }
-
 .profile__buttons {
   display: flex;
   /*flex-wrap: wrap;*/
 }
-
 .profile__button {
   height: 32px;
   width: 170px;
@@ -535,30 +477,21 @@ textarea {
   border: 1px solid #0275B1;
   border-radius: 4px;
   padding: 4px 15px;
-  transition: background .9s ease-in-out, color .2s ease-in-out;
- }
-
+  transition: background 0.9s ease-in-out, color 0.2s ease-in-out;
+}
 .profile__button_blue {
   margin-right: 15px;
 }
-
 .profile__button:hover {
   color: #FFFFFF;
   background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
-  transition: background 2s ease-in-out, color .4s ease-in-out;
+  transition: background 2s ease-in-out, color 0.4s ease-in-out;
 }
 
 /*---------------------------------------*/
-
 .sidebar-block {
-  background: #FFFFFF;
-  border-radius: 4px;
   padding: 25px 30px 30px 25px;
   margin-bottom: 20px;
-}
-
-.sidebar-block_shadow {
-  box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
 }
 
 .sidebar-header {
@@ -571,73 +504,80 @@ textarea {
   border-bottom: 1px solid #F4F4F4;
 }
 
-.blue-link, .stat { /*так можно через запятую общие значения указать?*/
+.blue-link { /*так можно через запятую общие значения указать?*/
   color: #0275B1;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-.stat {
-  font-size: 52px;
-  line-height: 50px;
-}
-
-.stat-item {
+.dashboard-item {
   display: flex;
   flex-direction: column;
 }
-
-.stat-item:not(:last-child) {
+.dashboard-item:not(:last-child) {
   margin-bottom: 20px;
 }
-
-.stat-text {
+.dashboard-item__count {
+  font-size: 52px;
+  line-height: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #0275B1;
+}
+.dashboard-item__text {
   font-size: 14px;
   line-height: 150%;
 }
 
-.visitors__item, .recomend-item__link { /*если стили у этих айтемов схожи- может как то их в коде назвать Одинаково?*/
+.visitors__item { /*если стили у этих айтемов схожи- может как то их в коде назвать Одинаково?*/
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
 
-.visitors-item__photo, .recomend-item__video {
+.visitors-item__photo {
   margin-right: 15px;
 }
-
-.visitors-item__name, .recomend-item__name {
+.visitors-item__name {
   font-size: 13px;
   line-height: 12px;
   font-weight: 700;
+  margin-bottom: 5px;
 }
-
-.recomend-item__name {
-  line-height: 125%;
-}
-
-.visitors-item__body, .recomend-item__body {
+.visitors-item__body {
   display: flex;
   flex-direction: column;
 }
 
-.visitors-item__name, .recomend-item__name {
-  margin-bottom: 5px;
+.recomend__items {
+  margin-bottom: 30px;
 }
 
-.recomend__items {
-    margin-bottom: 30px;  
+.recomend-item__link { /*если стили у этих айтемов схожи- может как то их в коде назвать Одинаково?*/
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.recomend-item__video {
+  margin-right: 15px;
+}
+.recomend-item__name {
+  font-size: 13px;
+  line-height: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  margin-bottom: 5px;
+}
+.recomend-item__body {
+  display: flex;
+  flex-direction: column;
 }
 
 /*----------------------------------------*/
-
-.tabs {}
-
 .tabs__items {
   display: flex;
   height: 50px;
 }
-
 .tabs__item {
   display: flex;
   align-items: center;
@@ -648,14 +588,18 @@ textarea {
   background: #FFFFFF;
   text-transform: uppercase;
   font-weight: 700;
-  transition: background .4s ease-in-out, color .2s ease-in-out;
+  transition: background 0.4s ease-in-out, color 0.2s ease-in-out;
 }
-
- .tabs__item:hover {
-    background: #E7E7E7;
-    transition: background .2s ease-in-out;
+.tabs__item_01 {
+  border-top-left-radius: 5px;
 }
-
+.tabs__item_03 {
+  border-top-right-radius: 5px;
+}
+.tabs__item:hover {
+  background: #E7E7E7;
+  transition: background 0.2s ease-in-out;
+}
 .tabs__item:focus {
   position: relative;
   bottom: 10px;
@@ -663,71 +607,47 @@ textarea {
   color: #ffffff;
   background: linear-gradient(180deg, #0077B5 0%, #0E6795 100%);
   border-radius: 4px 4px 0px 0px;
-  transition: background .5s ease-in-out, color .2s ease-in-out;
+  transition: background 0.5s ease-in-out, color 0.2s ease-in-out;
 }
-
-.tabs__item_01 {
-  border-top-left-radius: 5px;
-}                 
-
-.tabs__item_03 {
-  border-top-right-radius: 5px;
-}
-
-.tabs-line {
+.tabs__line {
   position: relative;
   bottom: 11px;
   border-top: 1px solid #E7E7E7;
   height: 50px;
-  background: linear-gradient(180deg, rgb(227 231 235 / 26%) 0%, rgb(222 223 224 / 0%) 100%); /* TODO У меня редактор показывает ошибку, но хром скушал как то, возможно лучше переписать, а то в разных браузерах могут быть проблемы */
+  background: linear-gradient(180deg, rgba(227, 231, 235, 0.26) 0%, rgba(222, 223, 224, 0) 100%); /* TODO У меня редактор показывает ошибку, но хром скушал как то, возможно лучше переписать, а то в разных браузерах могут быть проблемы */
 }
 
 /*----------------------------------------*/
-
-
 .about {
-  background: #FFFFFF;
-  box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
-  border-radius: 4px;
   padding: 30px;
   position: relative;
   bottom: 30px;
 }
-
 .about__title {
   margin-bottom: 15px;
 }
-
 .about__text {
   font-size: 14px;
-  line-height: 150%;
+  line-height: 21px;
   margin-bottom: 20px;
 }
 
 /*-------------------------------------------*/
-
 .projects {
-  background: #FFFFFF;
-  box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
-  border-radius: 4px;
   padding: 30px;
 }
-
-.title-wrap {
+.projects__title-wrap {
   margin-bottom: 25px;
 }
-
-.projects__title {
-  display: inline-block;
-  margin-right: 15px;
-}
-
-.title-wrap span {
+.projects__count {
   font-size: 17px;
   line-height: 17px;
   color: #747474;
 }
-
+.projects__title {
+  display: inline-block;
+  margin-right: 15px;
+}
 .projects__items {
   display: flex;
   flex-wrap: wrap;
@@ -740,49 +660,35 @@ textarea {
   flex-direction: column;
   overflow: hidden;
 }
-
-.projects-item__link img {
-  transition: transform .3s linear;
-}
-
-.projects-item__link img:hover {
-  transform: scale(1.02);
-}
-
 .projects-item__photo {
+  transition: transform 0.3s linear;
   margin-bottom: 15px;
 }
-
+.projects-item__photo:hover {
+  transform: scale(1.02);
+}
 .projects-item__body {
   display: flex;
   flex-direction: column;
 }
-
 .projects-item__title {
   margin-bottom: 5px;
 }
 
 /*-------------------------------------------*/
-
 .skills {
-  background: #FFFFFF;
-  box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
-  border-radius: 4px;
   padding: 30px;
   margin-top: 20px;
 }
-
 .skills__title {
   margin-bottom: 24px;
 }
-
 .skills__items {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 25px;
 }
-
 .skills__item {
   border: 1px solid #F4F4F4;
   border-radius: 6px;
@@ -794,8 +700,8 @@ textarea {
 .skills-item__header {
   display: flex;
   margin-bottom: 5px;
+  justify-content: space-between;
 }
-
 .skills-item__quantity {
   font-size: 14px;
   font-weight: 700;
@@ -803,21 +709,17 @@ textarea {
   text-align: right;
   color: #0275B1;
 }
-
 .skills-item__title {
   margin-right: 45px;
   margin-bottom: 5px;
 }
-
 .skills-item__body {
   display: flex;
 }
-
 .skills-item__photo {
-  margin-left: -10px;  /*так можно ? Да, норм */
+  margin-left: -10px; /*так можно ? Да, норм */
   display: block;
 }
-
 .skills-item__photo_count {
   display: flex;
   width: 24px;
@@ -831,22 +733,14 @@ textarea {
   border-radius: 50%;
 }
 
-.btn-show-more {}
-
 /*------------------------------------------*/
-
 .experience {
-  background: #FFFFFF;
-  box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
-  border-radius: 4px;
   padding: 30px;
   margin-top: 20px;
 }
-
 .experience__title {
   margin-bottom: 25px;
 }
-
 .experience__item {
   display: flex;
   align-items: flex-start;
@@ -857,22 +751,19 @@ textarea {
 .experience-item__title {
   margin-bottom: 10px;
 }
-
 .experience-item__img {
   margin-right: 16px;
 }
-
-.experience-item__info span {
+.experience-item__span {
   display: inline-block;
   margin-bottom: 5px;
 }
-
-.experience-item__info p {
+.experience-item__text {
   margin-top: 5px;
 }
 
 .experience-span-opasity {
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .experience-span-blue {
@@ -881,19 +772,13 @@ textarea {
 }
 
 /*-----------------------------------------------*/
-
 .education {
-  background: #FFFFFF;
-  box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
-  border-radius: 4px;
   padding: 30px;
   margin-top: 20px;
 }
-
 .education__title {
   margin-bottom: 25px;
 }
-
 .education__item {
   display: flex;
   align-items: flex-start;
@@ -903,8 +788,6 @@ textarea {
 .education-item__img {
   margin-right: 16px;
 }
-
-.education-item__body {}
 .education-item__title {
   margin-bottom: 10px;
 }
@@ -912,47 +795,43 @@ textarea {
 .education-span-opasity {
   display: block;
   margin: 5px 0 10px 0;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 /*-----------------------------------------------*/
-
 .footer {
   padding: 30px 0 45px 0;
   border-top: 1px solid #E7E7E7;
-  background:  #F7F9FB;
+  background: #F7F9FB;
   background-image: linear-gradient(180deg, rgba(241, 244, 248, 0.8) 0%, rgba(241, 244, 248, 0) 100%);
   background-repeat: no-repeat;
   flex: 0 0 auto;
 }
-
 .footer__container {
   display: flex;
   /*flex-wrap: wrap;*/
   justify-content: space-between;
 }
-
 .footer__logo {
   flex-shrink: 0;
   padding-right: 25px;
 }
 
-.footer__logo-img {
+.footer-logo__img {
   display: block;
   width: 46px;
   margin-bottom: 12px;
 }
-
-.footer__logo-text {
+.footer-logo__text {
   display: block;
   width: 61px;
 }
-
 
 .footer-title {
   font-weight: 600;
   margin-bottom: 23px;
 }
+
 .footer__nav {
   flex-shrink: 0;
 }
@@ -960,24 +839,22 @@ textarea {
 .footer-nav__cols {
   display: flex;
 }
-
 .footer-nav__col:not(:last-child) {
   padding-right: 55px;
 }
 .footer-nav__col:last-child {
   margin-right: 20px;
 }
-
 .footer-nav__link {
   margin-bottom: 12px;
 }
 
-.footer__fast-access {
+.footer__buttons {
   margin-left: 15px;
   margin-right: 15px;
 }
 
- .footer__button-settings, .footer__button-question {
+.footer__button {
   height: 32px;
   width: 170px;
   display: flex;
@@ -986,49 +863,36 @@ textarea {
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
-  color: #0275B1;
-  background: #FFFFFF;
   border: 1px solid #0275B1;
   border-radius: 4px;
   text-align: center;
   padding: 4px 15px;
-  transition: background .4s ease-in-out, color .2s ease-in-out;
+  transition: background-color 0.4s ease-in-out, color 0.2s ease-in-out;
+  background-position: 137px 7px;
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
 }
-
-.footer__button-question {
+.footer__button_question {
+  color: #0275B1;
   background-image: url("../img/icons/help-circle__blue.svg");
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
-  background-position: 137px 7px;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
-
- .footer__button-settings {
-  background-image: url("../img/icons/settings.svg");
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
-  background-position: 137px 7px;
- }
-
-.footer__button-question:hover {
+.footer__button_question:hover {
   color: #ffffff;
-  background: #0275B1;
+  background-color: #0275B1;
   background-image: url("../img/icons/help-circle.svg");
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
-  background-position: 137px 7px;
 }
-
-.footer__button-settings:hover {
+.footer__button_settings {
+  color: #0275B1;
+  background-image: url("../img/icons/settings.svg");
+}
+.footer__button_settings:hover {
   color: #ffffff;
-  background: #0275B1;
-  background-image: url("../img/icons/settings_white.svg");
-  background-size: 16px 16px;
-  background-repeat: no-repeat;
-  background-position: 137px 7px;
+  background-color: #0275B1;
+  background-image: url("../img/icons/settings_white2.svg");
 }
-
-.footer__button-select {
+.footer__button_select {
   height: 32px;
   width: 270px;
   text-transform: uppercase;
@@ -1036,7 +900,7 @@ textarea {
   display: flex;
   align-items: center;
   padding: 4px 15px;
-  background: #FFFFFF; 
+  background-color: #FFFFFF;
   border: 1px solid #F0F0F0;
   border-radius: 4px;
   background-image: url("../img/icons/chevron-down.svg");

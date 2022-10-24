@@ -1,0 +1,98 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  /*transition: all .2s ease-in-out;*/
+}
+
+a, a:active, a:focus, a:hover {
+  cursor: pointer;
+  outline: none;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-style: inherit;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  min-width: 320px;
+  color: #181818;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 11px;
+}
+
+/*Обнуление input button и тп*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  font: inherit; /* По дефолту, шрифтовые свойства, для этих элементов не наследуются */
+  color: inherit;
+  letter-spacing: inherit;
+}
+
+input::-webkit-input-placeholder {
+  font-weight: 400;
+  /*font-size: 15px;
+  line-height: 12px;*/
+  color: #CECECE;
+}
+
+:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+input,
+textarea,
+select:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+textarea {
+  resize: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

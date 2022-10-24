@@ -48,7 +48,7 @@
                 <img src="img/icons/message-square.svg" alt="message-square" class="menu__link-icon">
                 <p class="menu__link-text">chat</p>
                 <span class="menu__link-notify">3</span> <!-- такие штуки делать отдельным тэгом - НЕ псевдо-->
-              </a> 
+              </a>
             </li>
             <li class="menu__item">
               <a href="#" class="menu__link">
@@ -77,14 +77,10 @@
             </div>
           </div>
         </div>
-        <nav class="header__other burger-dots other-menu">
+        <nav class="header__burger header-burger">
           <!-- Это тоже NAV ?  хз если честно, наверное мржно и не nav вкдь это второстепенное меню -->
-          <span class="other-menu__dots"></span>
-          <span class="other-menu__other">other</span>
-        </nav>
-        <nav class="header__burger burger-dots other-menu">
-          <!-- АДАПТИВ _ здесь надо создавать новый бургер? или надо было использовать старый? ну если он выглядит так же то новый не надо -->
-          <span class="other-menu__dots"></span>
+          <span class="header-burger__dots"></span>
+          <span class="header-burger__other">other</span>
         </nav>
       </div>
     </header>
@@ -94,10 +90,10 @@
           <section class="profile">
             <div class="profile__tools">
               <button class="profile__tool btn">
-                <img class="upload-arrow" src="img/icons/upload.svg" alt="">
+                <img class="profile__tool-upload" src="img/icons/upload.svg" alt="">
               </button>
-              <div class="right-tools__wrapper">
-                <button class="profile__tool _edit btn">Edit profile</button>
+              <div class="profile__tools-wrap">
+                <button class="profile__tool profile__tool_edit btn">Edit profile</button>
                 <button class="profile__tool btn">
                   <span class="profile__dots"></span>
                 </button>
@@ -105,16 +101,16 @@
             </div>
             <div class="profile__body">
               <img class="profile__photo" src="img/user_photo/ellipse.png" alt="">
-              <div class="info-wrap">
-                <div class="info-header">
-                  <h1 class="profile__name">Dmitry Kargaev</h1> <!-- + логотипчик - бэкграундом или ПСЕВДО? -->
+              <div class="profile__info">
+                <div class="profile__row">
+                  <h1 class="profile__title">Dmitry Kargaev</h1> <!-- + логотипчик - бэкграундом или ПСЕВДО? -->
                   <span class="profile__location">Saint Petersburg, Russian Federation</span>
                 </div>
                 <p class="profile__text">Freelance UX/UI designer, 80+ projects in web design, mobile apps (iOS &
                   android) and creative projects. Open to offers.</p>
                 <div class="profile__buttons">
-                  <a href="#" class="profile__button profile__button_blue">Contact info</a>
-                  <a href="#" class="profile__button">1,043 connections</a>
+                  <a class="profile__button profile__button_blue" href="#">Contact info</a>
+                  <a class="profile__button" href="#">1,043 connections</a>
                 </div>
               </div>
             </div>
@@ -125,23 +121,23 @@
               <a href="#" class="tabs__item tabs__item_02">Activity & interests</a>
               <a href="#" class="tabs__item tabs__item_03">Articles (3)</a>
             </nav>
-            <div class="tabs-line"></div>
+            <div class="tabs__line"></div>
           </section>
           <section class="about">
             <h2 class="about__title block-title">About</h2>
             <p class="about__text">I'm more experienced in eCommerce web projects and mobile banking apps, but also like
               to work with creative projects, such as landing pages or unusual corporate websites.</p>
-            <button class="btn-show-more">See more</button>
+            <button class="about__link btn-show-more">See more</button>
           </section>
           <section class="projects">
-            <div class="title-wrap">
+            <div class="projects__title-wrap">
               <h2 class="projects__title block-title">Projects</h2>
-              <span>3 of 12</span>
+              <span class="projects__count">3 of 12</span>
             </div>
             <div class="projects__items">
               <div class="projects__item projects-item">
-                <a href="3" class="projects-item__link">
-                  <img src="img/img/ext.png" alt="photo" class="projects-item__photo">
+                <a class="projects-item__link" href="#">
+                  <img class="projects-item__photo" src="img/img/ext.png" alt="photo">
                   <div class="projects-item__body">
                     <span class="projects-item__title item-title">Zara redesign concept</span>
                     <span>UX/UI design, 15.07.2019</span>
@@ -149,8 +145,8 @@
                 </a>
               </div>
               <div class="projects__item projects-item">
-                <a href="3" class="projects-item__link">
-                  <img src="img/img/ext (1).png" alt="photo" class="projects-item__photo">
+                <a class="projects-item__link" href="#">
+                  <img class="projects-item__photo" src="img/img/ext_1.png" alt="photo">
                   <div class="projects-item__body">
                     <span class="projects-item__title item-title">SCTHON event brand identity</span>
                     <span>Graphic design, 03.31.2019</span>
@@ -159,7 +155,7 @@
               </div>
               <div class="projects__item projects-item">
                 <a href="3" class="projects-item__link">
-                  <img src="img/img/ext (2).png" alt="photo" class="projects-item__photo">
+                  <img class="projects-item__photo" src="img/img/ext_2.png" alt="photo">
                   <div class="projects-item__body">
                     <span class="projects-item__title item-title">Drozd. Brand identity. 2016</span>
                     <span>Graphic design, 03.04.2016</span>
@@ -175,15 +171,15 @@
               <div class="skills__item skills-item">
                 <div class="skills-item__header">
                   <!-- или здесь правильнее по БЭМ именовать skills__item-header ?  Да не, так норм -->
-                  <span class="skills-item__title item-title">User experience (UX)</span> <!-- skills__item-title ? -->
+                  <span class="skills-item__title item-title">User experience (UX)</span>
                   <span class="skills-item__quantity">6</span>
                 </div>
                 <div class="skills-item__body">
-                  <img src="img/user_photo/Photo.png" alt="photo" class="skills-item__photo">
-                  <img src="img/user_photo/Photo-1.png" alt="photo" class="skills-item__photo">
-                  <img src="img/user_photo/Photo-2.png" alt="photo" class="skills-item__photo">
-                  <img src="img/user_photo/Photo-3.png" alt="photo" class="skills-item__photo">
-                  <img src="img/user_photo/Photo-4.png" alt="photo" class="skills-item__photo">
+                  <img class="skills-item__photo" src="img/user_photo/Photo.png" alt="photo">
+                  <img class="skills-item__photo" src="img/user_photo/Photo-1.png" alt="photo">
+                  <img class="skills-item__photo" src="img/user_photo/Photo-2.png" alt="photo">
+                  <img class="skills-item__photo" src="img/user_photo/Photo-3.png" alt="photo">
+                  <img class="skills-item__photo" src="img/user_photo/Photo-4.png" alt="photo">
                   <span class="skills-item__photo skills-item__photo_count">+1</span>
                 </div>
               </div>
@@ -193,11 +189,11 @@
                   <span class="skills-item__quantity">7</span>
                 </div>
                 <div class="skills-item__body">
-                  <img src="img/user_photo/Photo.png" alt="photo" class="skills-item__photo">
-                  <img src="img/user_photo/Photo-1.png" alt="photo" class="skills-item__photo">
-                  <img src="img/user_photo/Photo-2.png" alt="photo" class="skills-item__photo">
-                  <img src="img/user_photo/Photo-3.png" alt="photo" class="skills-item__photo">
-                  <img src="img/user_photo/Photo-4.png" alt="photo" class="skills-item__photo">
+                  <img class="skills-item__photo" src="img/user_photo/Photo.png" alt="photo">
+                  <img class="skills-item__photo" src="img/user_photo/Photo-1.png" alt="photo">
+                  <img class="skills-item__photo" src="img/user_photo/Photo-2.png" alt="photo">
+                  <img class="skills-item__photo" src="img/user_photo/Photo-3.png" alt="photo">
+                  <img class="skills-item__photo" src="img/user_photo/Photo-4.png" alt="photo">
                   <span class="skills-item__photo skills-item__photo_count">+2</span>
                 </div>
               </div>
@@ -224,18 +220,19 @@
               <div class="experience-item__body">
                 <p class="experience-item__title item-title">Freelance UX/UI designer</p>
                 <div class="experience-item__info">
-                  <span>Self Employed</span>&nbsp&nbsp&nbsp
+                  <span class="experience-item__span">Self Employed</span>&nbsp&nbsp&nbsp
                   <span class="experience-span-opasity">Around the world</span><br>
                   <span class="experience-span-opasity">Jun 2016 — Present</span>&nbsp&nbsp&nbsp
                   <span class="experience-span-blue">3 yrs 3 mos</span>
-                  <p>Work with clients and web studios as freelancer. Work in next areas: eCommerce web projects;
+                  <p class="experience-item__text">Work with clients and web studios as freelancer. Work in next areas:
+                    eCommerce web projects;
                     creative landing pages; iOs and Android apps; corporate web sites and corporate identity sometimes.
                   </p>
                 </div>
               </div>
             </div>
             <div class="experience__item experience-item">
-              <img src="img/img/Group (1).png" alt="photo" class="experience-item__img">
+              <img src="img/img/Group_1.png" alt="photo" class="experience-item__img">
               <div class="experience-item__body">
                 <div class="experience-item__info">
                   <p class="experience-item__title item-title">UX/UI designer</p>
@@ -252,7 +249,7 @@
           <section class="education">
             <h2 class="education__title block-title">Education</h2>
             <div class="education__item education-item">
-              <img src="img/img/Group (2).png" alt="photo" class="education-item__img">
+              <img src="img/img/Group_2.png" alt="photo" class="education-item__img">
               <div class="education-item__body">
                 <p class="education-item__title item-title">Moscow State Linguistic University</p>
                 <p>Bachelor's degree Field Of StudyComputer and Information Systems Security/Information Assurance</p>
@@ -263,114 +260,113 @@
           </section>
         </section>
         <aside class="sidebar">
-          <div class="sidebar-block sidebar-block_shadow">
-            <div class="sidebar-header">
-              <h3 class="dashbord__title">your dashboard</h3>
-              <a href="#" class="dashbord__link blue-link">go to stats</a>
-              <!-- Это ссылка или кнопка? вероятнее всего ссылка, но в таких больших проектах делают и кнопки стилизованные под ссылки -->
+          <div class="dashboard sidebar-block sidebar-block_shadow">
+            <div class="dashboard__header sidebar-header">
+              <h3 class="dashboard__title">your dashboard</h3>
+              <a href="#" class="dashboard__link blue-link">go to stats</a>
             </div>
-            <div class="dashbord__stat stat-items">
-              <div class="stat-item">
-                <span class="stat">367</span>
-                <span class="stat-text">views today</span>
+            <div class="dashboard__items">
+              <div class="dashboard__item dashboard-item">
+                <span class="dashboard-item__count">367</span>
+                <span class="dashboard-item__text">views today</span>
               </div>
-              <div class="stat-item">
-                <span class="stat">15</span>
-                <span class="stat-text">posts views</span>
+              <div class="dashboard__item dashboard-item">
+                <span class="dashboard-item__count">15</span>
+                <span class="dashboard-item__text">posts views</span>
               </div>
-              <div class="stat-item">
-                <span class="stat">9</span>
-                <span class="stat-text">search appereances</span>
+              <div class="dashboard__item dashboard-item">
+                <span class="dashboard-item__count">9</span>
+                <span class="dashboard-item__text">search appereances</span>
               </div>
             </div>
           </div>
           <div class="visitors sidebar-block">
             <div class="visitors__header sidebar-header">
-              <h3 class="visitors__title sidebar__title">visitors</h3>
-              <a href="#" class="visitors__link blue-link">view all</a>
+              <h3 class="visitors__title sidebar-title">visitors</h3>
+              <a class="visitors__link blue-link" href="#">view all</a>
             </div>
             <ul class="visitors__items">
               <li class="visitors__item visitors-item">
-                <img src="img/user_photo/Photo (1).png" alt="photo" class="visitors-item__photo">
+                <img class="visitors-item__photo" src="img/user_photo/Photo_1.png" alt="photo">
                 <div class="visitors-item__body">
                   <span class="visitors-item__name">Darlene Black</span>
-                  <span>HR-manager, 10 000 connec...</span>
+                  <span class="visitors-item__text">HR-manager, 10 000 connec...</span>
                 </div>
               </li>
               <li class="visitors__item visitors-item">
-                <img src="img/user_photo/Photo (2).png" alt="photo" class="visitors-item__photo">
+                <img class="visitors-item__photo" src="img/user_photo/Photo_2.png" alt="photo">
                 <div class="visitors-item__body">
                   <span class="visitors-item__name">Theresa Steward</span>
-                  <span>iOS developer</span>
+                  <span class="visitors-item__text">iOS developer</span>
                 </div>
               </li>
               <li class="visitors__item visitors-item">
-                <img src="img/user_photo/Photo (3).png" alt="photo" class="visitors-item__photo">
+                <img class="visitors-item__photo" src="img/user_photo/Photo_3.png" alt="photo">
                 <div class="visitors-item__body">
                   <span class="visitors-item__name">Brandon Wilson</span>
-                  <span>Senior UX designer</span>
+                  <span class="visitors-item__text">Senior UX designer</span>
                 </div>
               </li>
               <li class="visitors__item visitors-item">
-                <img src="img/user_photo/Photo (4).png" alt="photo" class="visitors-item__photo">
+                <img class="visitors-item__photo" src="img/user_photo/Photo_4.png" alt="photo">
                 <div class="visitors-item__body">
                   <span class="visitors-item__name">Kyle Fisher</span>
-                  <span>Product designer at Com...</span>
+                  <span class="visitors-item__text">Product designer at Com...</span>
                 </div>
               </li>
               <li class="visitors__item visitors-item">
-                <img src="img/user_photo/Photo (5).png" alt="photo" class="visitors-item__photo">
+                <img class="visitors-item__photo" src="img/user_photo/Photo_5.png" alt="photo">
                 <div class="visitors-item__body">
                   <span class="visitors-item__name">Audrey Alexander</span>
-                  <span>Team lead at Google</span>
+                  <span class="visitors-item__text">Team lead at Google</span>
                 </div>
               </li>
             </ul>
           </div>
           <div class="recomend sidebar-block">
             <div class="recomend__header sidebar-header">
-              <h3 class="recomend__title sidebar__title">You may like these courses</h3>
+              <h3 class="recomend__title sidebar-title">You may like these courses</h3>
             </div>
             <ul class="recomend__items">
               <li class="recomend__item recomend-item">
                 <a href="#" class="recomend-item__link">
-                  <img src="img/img/Group (3).png" alt="photo" class="recomend-item__video">
+                  <img class="recomend-item__video" src="img/img/Group_3.png" alt="photo">
                   <div class="recomend-item__body">
                     <span class="recomend-item__name">UX Foundations: Prototyping</span>
-                    <span>27,959 viewers</span>
+                    <span class="visitors-item__text">27,959 viewers</span>
                   </div>
                 </a>
               </li>
               <li class="recomend__item recomend-item">
-                <a href="#" class="recomend-item__link">
-                  <img src="img/img/Group (4).png" alt="photo" class="recomend-item__video">
+                <a class="recomend-item__link" href="#">
+                  <img src="img/img/Group_4.png" alt="photo" class="recomend-item__video">
                   <div class="recomend-item__body">
                     <span class="recomend-item__name">Designing with Adobe XD and pro</span>
-                    <span>9,122 viewers</span>
+                    <span class="visitors-item__text">9,122 viewers</span>
                   </div>
                 </a>
               </li>
               <li class="recomend__item recomend-item">
-                <a href="#" class="recomend-item__link">
-                  <img src="img/img/Group (5).png" alt="photo" class="recomend-item__video">
+                <a class="recomend-item__link" href="#">
+                  <img class="recomend-item__video" src="img/img/Group_5.png" alt="photo">
                   <div class="recomend-item__body">
                     <span class="recomend-item__name">UX Foundations: Styles and GUIs</span>
-                    <span>13,858 viewers.</span>
+                    <span class="visitors-item__text">13,858 viewers.</span>
                   </div>
                 </a>
               </li>
             </ul>
-            <a href="#" class="recomend__link blue-link">See all recomendations</a>
+            <a class="recomend__link blue-link" href="#">See all recomendations</a>
           </div>
         </aside>
       </div>
     </main>
     <footer class="footer">
       <div class="footer__container container">
-        <div class="footer__logo">
-          <a href="#" class="footer__logo-link">
-            <img src="img/icons/Logo.svg" class="footer__logo-img" alt="">
-            <img src="img/icons/LinkedIn.svg" class="footer__logo-text" alt="">
+        <div class="footer__logo footer-logo">
+          <a class="footer-logo__link" href="#">
+            <img class="footer-logo__img" src="img/icons/Logo.svg" alt="">
+            <img class="footer-logo__text" src="img/icons/LinkedIn.svg" alt="">
           </a>
         </div>
         <nav class="footer__nav footer-nav">
@@ -417,15 +413,15 @@
             </ul>
           </div>
         </nav>
-        <div class="footer__fast-access">
-          <p class="footer__fast-acces-title footer-title">Fast access</p>
-          <button class="footer__button-question">Questions?</button>
-          <button class="footer__button-settings">Settings</button>
+        <div class="footer__buttons">
+          <p class="footer__buttons-title footer-title">Fast access</p>
+          <button class="footer__button footer__button_question">Questions?</button>
+          <button class="footer__button footer__button_settings">Settings</button>
         </div>
         <div class="footer__language">
           <p class="footer__language-title footer-title">Language</p>
           <div class="footer__select">
-            <button class="footer__button-select">English</button>
+            <button class="footer__button footer__button_select">English</button>
           </div>
         </div>
       </div>
